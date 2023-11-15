@@ -2,25 +2,29 @@
   width: 500px;
   margin-top: 50px;
   margin-bottom: 50px;
-  border: 3px solid rgb(143, 70, 226);
 }
 .title {
   font-size: 20px;
   font-weight: 700;
   text-align: center;
- 
 }
 
 .stat_list {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
- 
+  gap: 15px;
   padding-top: 20px;
 }
 .item {
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  transition: 0.2s;
+  position: relative;
+  background-color: darkkhaki;
 }
 .label {
   display: block;
