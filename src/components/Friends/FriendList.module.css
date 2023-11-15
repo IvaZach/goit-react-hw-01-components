@@ -1,5 +1,5 @@
-.friend-list{
-    display: flex;
+.friend-list {
+  display: flex;
 }
 .item {
   display: flex;
@@ -29,6 +29,6 @@
   background-color: red;
   text-align: center;
 }
-.isOnlineStatus{
-    background-color: green;
+.isOnlineStatus {
+  background-color: green;
 }
