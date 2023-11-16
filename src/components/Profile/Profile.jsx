@@ -1,15 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css';
 
-const Profile = ({
-  username,
-  avatar,
-  tag,
-  location,
-  followers,
-  views,
-  likes,
-}) => {
+const Profile = ({ username, avatar, tag, location, stats }) => {
   console.log();
   return (
     <div className={css.profile}>
@@ -23,15 +15,15 @@ const Profile = ({
       <ul className={css.stats}>
         <li className={css.stats_profile_list}>
           <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{followers}</span>
+          <span className={css.quantity}>{stats.followers}</span>
         </li>
         <li className={css.stats_profile_list}>
           <span className={css.label}>Views</span>
-          <span className={css.quantity}>{views}</span>
+          <span className={css.quantity}>{stats.views}</span>
         </li>
         <li className={css.stats_profile_list}>
           <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{likes}</span>
+          <span className={css.quantity}>{stats.likes}</span>
         </li>
       </ul>
     </div>
@@ -43,9 +35,7 @@ Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
+  stats: PropTypes.objectOf(PropTypes.shape),
 };
 
 export default Profile;

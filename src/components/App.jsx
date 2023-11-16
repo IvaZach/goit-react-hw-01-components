@@ -1,7 +1,7 @@
 import Profile from './Profile/Profile';
 import user from './Profile/user.json';
 import data from './Statistics/data.json';
-import StatisticsList from './Statistics/StatisticsList';
+import Statistics from './Statistics/Statistics';
 import friends from './Friends/friends.json';
 import FriendList from './Friends/FriendList';
 import transactions from './Transactions/transactions.json';
@@ -15,12 +15,10 @@ export default function App() {
         tag={user.tag}
         location={user.location}
         avatar={user.avatar}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
+        stats={user.stats}
       />
-      <StatisticsList title="Upload stats" stats={data} />
-      <StatisticsList stats={data} />
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />;
     </>

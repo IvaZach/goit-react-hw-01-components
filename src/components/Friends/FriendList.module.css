@@ -1,5 +1,6 @@
-.friend-list {
+.friendList {
   display: flex;
+  flex-direction: column;
 }
 .item {
   display: flex;
@@ -26,8 +27,8 @@
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  background-color: red;
   text-align: center;
+  background-color: red;
 }
 .isOnlineStatus {
   background-color: green;
